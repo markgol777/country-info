@@ -5,10 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## environment
 create .environment.ts in the root of the project like shown:
 
+```
 export const environment = {
   API_KEY: 'https://date.nager.at/api/v3',
 };
-
+```
 
 ## Development server
 
