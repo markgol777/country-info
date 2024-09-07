@@ -1,0 +1,39 @@
+<div class="table-container">
+  <div class="info">
+    <h2 class="title">Holidays for {{ selectedYear }}</h2>
+    <a class="go-back" [routerLink]="['/']">Go back</a>
+  </div>
+
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Holiday Name</th>
+        <th>Local Name</th>
+        <th>Date</th>
+        <th>Fixed</th>
+        <th>Global</th>
+        <th>Counties</th>
+        <th>Launch Year</th>
+        <th>Types</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let holiday of holidays">
+        <td>{{ holiday.name }}</td>
+        <td>{{ holiday.localName }}</td>
+        <td>{{ holiday.date | date }}</td>
+        <td>{{ holiday.fixed ? 'Yes' : 'No' }}</td>
+        <td>{{ holiday.global ? 'Yes' : 'No' }}</td>
+        <td>{{ holiday.counties ? holiday.counties.join(', ') : 'N/A' }}</td>
+        <td>{{ holiday.launchYear ? holiday.launchYear : 'N/A' }}</td>
+        <td>{{ holiday.types.join(', ') }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="year-switcher">
+    <button *ngFor="let year of years" (click)="onYearChange(year)" [ngClass]="{ 'active': year === selectedYear }">
+      {{ year }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h2 class="title">Random country holidays</h2>
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Next Holiday</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of countriesWithHolidays">
+        <td><a [routerLink]="[ '/country', item.country.countryCode ]">{{ item.country.name }}</a></td>
+        <td>{{ item.holiday.name }}</td>
+        <td>{{ item.holiday.date | date: 'longDate' }}</td>
+      </tr>
+    </tbody>
+  </table>

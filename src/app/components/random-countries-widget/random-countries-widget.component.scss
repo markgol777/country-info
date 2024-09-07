@@ -1,0 +1,39 @@
+@import '../../shared/css-variables/vars';
+
+.title {
+  font-family: $font-family;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-family;
+  font-size: 16px;
+  text-align: left;
+  border: 3px solid $primary-color;
+  margin-top: 20px;
+
+  a {
+    color: black;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    border: 2px solid $primary-color;
+  }
+
+  thead {
+    tr {
+      background-color: $primary-color;
+      color: $font-color;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-of-type(even) {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
