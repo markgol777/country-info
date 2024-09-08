@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryInfoServiceTsService } from '../../shared/services/country-info.service.ts.service';
-import { Code, Holiday } from '../../shared/interfaces/interface'; // Corrected imports
+import { Code, Holiday } from '../../shared/interfaces/interface';
 
 @Component({
   selector: 'app-random-countries-widget',
